@@ -1,5 +1,5 @@
 //
-//  ActorDetails.swift
+//  PeopleDetails.swift
 //  TMDBTest
 //
 //  Created by Arunkumar K M on 23/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActorDetails: Codable {
+struct PeopleDetails: Codable {
     let id: Int
     let name: String
     let biography: String?

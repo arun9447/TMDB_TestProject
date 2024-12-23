@@ -11,7 +11,7 @@ import SwiftUI
 struct TMDB_TestProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PeopleListView()
         }
     }
 }
