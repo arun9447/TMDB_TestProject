@@ -9,6 +9,6 @@ import Foundation
 
 struct ActorListResponse: Codable {
     let page: Int
-    let results: [Actor]
+    let results: [Actors]
     let total_pages: Int
 }

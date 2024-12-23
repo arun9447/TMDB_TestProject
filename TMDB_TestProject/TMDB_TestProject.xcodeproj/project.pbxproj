@@ -19,6 +19,7 @@
 		1F888AFF2D19B23000C6E325 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888AFC2D19B23000C6E325 /* ProfileImage.swift */; };
 		1F888B032D19B24700C6E325 /* ActorListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B012D19B24700C6E325 /* ActorListResponse.swift */; };
 		1F888B042D19B24700C6E325 /* ActorImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B022D19B24700C6E325 /* ActorImagesResponse.swift */; };
+		1F888B072D19B31600C6E325 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B062D19B31600C6E325 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1F888AFC2D19B23000C6E325 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		1F888B012D19B24700C6E325 /* ActorListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorListResponse.swift; sourceTree = "<group>"; };
 		1F888B022D19B24700C6E325 /* ActorImagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorImagesResponse.swift; sourceTree = "<group>"; };
+		1F888B062D19B31600C6E325 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				1F888ACF2D19B1E100C6E325 /* TMDB_TestProjectApp.swift */,
 				1F888AD12D19B1E100C6E325 /* ContentView.swift */,
+				1F888B052D19B2BA00C6E325 /* NetworkLayer */,
 				1F888AF92D19B21C00C6E325 /* Models */,
 				1F888AD32D19B1E300C6E325 /* Assets.xcassets */,
 				1F888AD52D19B1E300C6E325 /* Preview Content */,
@@ -156,6 +159,14 @@
 				1F888B012D19B24700C6E325 /* ActorListResponse.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		1F888B052D19B2BA00C6E325 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1F888B062D19B31600C6E325 /* NetworkManager.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				1F888AFD2D19B23000C6E325 /* Actor.swift in Sources */,
 				1F888AD22D19B1E100C6E325 /* ContentView.swift in Sources */,
 				1F888B042D19B24700C6E325 /* ActorImagesResponse.swift in Sources */,
+				1F888B072D19B31600C6E325 /* NetworkManager.swift in Sources */,
 				1F888AFF2D19B23000C6E325 /* ProfileImage.swift in Sources */,
 				1F888B032D19B24700C6E325 /* ActorListResponse.swift in Sources */,
 				1F888AD02D19B1E100C6E325 /* TMDB_TestProjectApp.swift in Sources */,
