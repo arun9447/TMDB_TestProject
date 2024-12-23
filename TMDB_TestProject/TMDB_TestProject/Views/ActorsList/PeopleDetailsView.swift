@@ -9,10 +9,12 @@ import SwiftUI
 
 
 struct PeopleDetailsView: View {
+    // MARK: - Properties
     let personId: Int
     @StateObject private var viewModel = PeopleDetailViewModel()
     @State private var isExpanded = false // State to toggle between expanded and collapsed text
     
+    // MARK: - Body
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -26,7 +28,7 @@ struct PeopleDetailsView: View {
                             Text(biography)
                                 .font(.body)
                                 .lineLimit(isExpanded ? nil : 4) 
-                            // Show full text if expanded, otherwise 4 lines
+                                // Show full text if expanded, otherwise 4 lines
                                 .padding(.horizontal)
                             
                             Button(action: {
