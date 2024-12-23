@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ProfileImage: Decodable, Identifiable {
-    var id = UUID() // Unique identifier for SwiftUI use
+struct ProfileImage: Decodable {
+    
     let aspect_ratio: Double
     let height: Int
     let iso_639_1: String?

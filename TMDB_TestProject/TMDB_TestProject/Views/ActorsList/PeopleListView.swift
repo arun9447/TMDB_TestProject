@@ -21,7 +21,9 @@ struct PeopleListView: View {
                     LazyVStack {
                         // Loop through the filtered people array and display each person using PersonCell
                         ForEach(viewModel.people) { actorObj in
+                            NavigationLink(destination: PeopleDetailsView(personId: actorObj.id)) {
                                 PeopleListCell(person: actorObj)
+                            }
                         }
 
                         // Show loading indicator while fetching data
@@ -45,7 +47,7 @@ struct PeopleListView: View {
                         viewModel.fetchPeople()
                     }
                 }
-                .navigationTitle("Favorite Actors")
+                .navigationTitle("Popular People")
             }
         }
     }
