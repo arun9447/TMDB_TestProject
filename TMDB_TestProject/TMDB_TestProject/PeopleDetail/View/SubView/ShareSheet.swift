@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - Shareview to share between the Apps
 struct ShareSheet: UIViewControllerRepresentable {
     var activityItems: [Any]
     var applicationActivities: [UIActivity]? = nil

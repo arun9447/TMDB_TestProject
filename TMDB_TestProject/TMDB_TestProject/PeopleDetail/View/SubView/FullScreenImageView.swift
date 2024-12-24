@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - FullScreenImageView
 struct FullScreenImageView: View {
     let imagePath: String
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct FullScreenImageView: View {
         HStack {
             Spacer()
             Button(action: {
-                dismiss() // Dismiss the FullScreenCover
+                presentationMode.wrappedValue.dismiss() // Dismiss the FullScreenCover
             }) {
                 Text("Close")
                     .font(.headline)
@@ -39,18 +39,7 @@ struct FullScreenImageView: View {
     }
     
     private var imageView: some View {
-        AsyncImage(url: URL(string: imagePath)) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .scaledToFill()
-            } else if phase.error != nil {
-                Text("Failed to load image")
-                    .foregroundColor(.red)
-            } else {
-                ProgressView()
-            }
-        }
-        .padding()
+        CustomImageLoader(url: URL(string: imagePath)!)
+            .padding()
     }
 }

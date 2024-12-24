@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// MARK: -  PeopleDetailViewModel
 class PeopleDetailViewModel: ObservableObject {
     @Published var person: PeopleDetails?
     @Published var images: [ProfileImage] = []
