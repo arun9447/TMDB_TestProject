@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F888AD02D19B1E100C6E325 /* TMDB_TestProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888ACF2D19B1E100C6E325 /* TMDB_TestProjectApp.swift */; };
-		1F888AD22D19B1E100C6E325 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888AD12D19B1E100C6E325 /* ContentView.swift */; };
 		1F888AD42D19B1E300C6E325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F888AD32D19B1E300C6E325 /* Assets.xcassets */; };
 		1F888AD72D19B1E300C6E325 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F888AD62D19B1E300C6E325 /* Preview Assets.xcassets */; };
 		1F888AE12D19B1E300C6E325 /* TMDB_TestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888AE02D19B1E300C6E325 /* TMDB_TestProjectTests.swift */; };
@@ -27,6 +26,9 @@
 		1F888B162D19B8B500C6E325 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B152D19B8B500C6E325 /* APIConfig.swift */; };
 		1F888B182D19D5E500C6E325 /* PeopleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B172D19D5E500C6E325 /* PeopleDetailViewModel.swift */; };
 		1F888B1A2D19D5FA00C6E325 /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B192D19D5FA00C6E325 /* PeopleDetailsView.swift */; };
+		1F888B1C2D1A559E00C6E325 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1B2D1A559E00C6E325 /* FullScreenImageView.swift */; };
+		1F888B1E2D1A5E8F00C6E325 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1D2D1A5E8F00C6E325 /* ShareSheet.swift */; };
+		1F888B202D1A638D00C6E325 /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1F2D1A638D00C6E325 /* ExpandableText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 /* Begin PBXFileReference section */
 		1F888ACC2D19B1E100C6E325 /* TMDB_TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB_TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F888ACF2D19B1E100C6E325 /* TMDB_TestProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_TestProjectApp.swift; sourceTree = "<group>"; };
-		1F888AD12D19B1E100C6E325 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F888AD32D19B1E300C6E325 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F888AD62D19B1E300C6E325 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F888ADC2D19B1E300C6E325 /* TMDB_TestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDB_TestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +71,9 @@
 		1F888B152D19B8B500C6E325 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		1F888B172D19D5E500C6E325 /* PeopleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewModel.swift; sourceTree = "<group>"; };
 		1F888B192D19D5FA00C6E325 /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
+		1F888B1B2D1A559E00C6E325 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
+		1F888B1D2D1A5E8F00C6E325 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		1F888B1F2D1A638D00C6E325 /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpandableText.swift; path = TMDB_TestProject/Views/Components/ExpandableText.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				1F888ACF2D19B1E100C6E325 /* TMDB_TestProjectApp.swift */,
-				1F888AD12D19B1E100C6E325 /* ContentView.swift */,
 				1F888B122D19B65100C6E325 /* ViewModels */,
 				1F888B082D19B3C800C6E325 /* Views */,
 				1F888B052D19B2BA00C6E325 /* NetworkLayer */,
@@ -200,6 +203,9 @@
 			children = (
 				1F888B092D19B3DC00C6E325 /* PeopleListView.swift */,
 				1F888B192D19D5FA00C6E325 /* PeopleDetailsView.swift */,
+				1F888B1B2D1A559E00C6E325 /* FullScreenImageView.swift */,
+				1F888B1D2D1A5E8F00C6E325 /* ShareSheet.swift */,
+				1F888B1F2D1A638D00C6E325 /* ExpandableText.swift */,
 			);
 			path = ActorsList;
 			sourceTree = "<group>";
@@ -355,11 +361,12 @@
 				1F888B0A2D19B3DC00C6E325 /* PeopleListView.swift in Sources */,
 				1F888AFE2D19B23000C6E325 /* PeopleDetails.swift in Sources */,
 				1F888AFD2D19B23000C6E325 /* PeopleData.swift in Sources */,
-				1F888AD22D19B1E100C6E325 /* ContentView.swift in Sources */,
 				1F888B142D19B66600C6E325 /* PeopleListViewModel.swift in Sources */,
 				1F888B042D19B24700C6E325 /* PeopleImagesResponse.swift in Sources */,
 				1F888B072D19B31600C6E325 /* NetworkManager.swift in Sources */,
+				1F888B202D1A638D00C6E325 /* ExpandableText.swift in Sources */,
 				1F888B112D19B50100C6E325 /* PeopleListCell.swift in Sources */,
+				1F888B1E2D1A5E8F00C6E325 /* ShareSheet.swift in Sources */,
 				1F888B182D19D5E500C6E325 /* PeopleDetailViewModel.swift in Sources */,
 				1F888B162D19B8B500C6E325 /* APIConfig.swift in Sources */,
 				1F888AFF2D19B23000C6E325 /* ProfileImage.swift in Sources */,
@@ -367,6 +374,7 @@
 				1F888B1A2D19D5FA00C6E325 /* PeopleDetailsView.swift in Sources */,
 				1F888B032D19B24700C6E325 /* PeopleListResponse.swift in Sources */,
 				1F888AD02D19B1E100C6E325 /* TMDB_TestProjectApp.swift in Sources */,
+				1F888B1C2D1A559E00C6E325 /* FullScreenImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

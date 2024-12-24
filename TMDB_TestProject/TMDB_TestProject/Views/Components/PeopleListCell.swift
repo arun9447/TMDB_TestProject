@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PeopleListCell: View {
     let person: PeopleData
-    
     var body: some View {
         HStack {
             // Image with overlay text
