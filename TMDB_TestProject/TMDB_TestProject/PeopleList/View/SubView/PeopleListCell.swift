@@ -6,32 +6,39 @@
 //
 
 import SwiftUI
+import Combine
 
+// MARK: -  Custom List Cell
 struct PeopleListCell: View {
     let person: PeopleData
-    
+    @AppStorage("selectedThemeColor") private var selectedThemeColorHex: String = "#FFFFFF" // Hex code for selected color
+    // Convert hex string to Color
+    private var selectedThemeColor: Color {
+        Color(hex: selectedThemeColorHex)
+    }
+
     var body: some View {
         HStack {
             // Image with overlay text
-            ZStack(alignment: .bottomTrailing) { // Align overlay text at the bottom right
-                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w200\(person.profile_path ?? "")")) { image in
-                    image
-                        .resizable()
-                        .scaledToFill() // Make sure the image fills the frame
-                        .frame(width: 120, height: 120) // Medium-sized rectangle
+            ZStack(alignment: .bottomTrailing) {
+                // Replaced AsyncImage with a manual approach for iOS 14
+                if let profilePath = person.profile_path, let url = URL(string: "https://image.tmdb.org/t/p/w200\(profilePath)") {
+                    CustomImageLoader(url: url)
+                        .scaledToFill()
+                        .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                } placeholder: {
-                    Color.gray.opacity(0.3) // Background color while image is loading
+                } else {
+                    Color.gray.opacity(0.3)
                         .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
-                
+
                 // Overlay text for category
                 Text(person.known_for_department ?? "")
                     .font(.caption)
                     .foregroundColor(.white)
                     .padding(5)
-                    .background(Color.black.opacity(0.7)) // Background for better text visibility
+                    .background(Color.black.opacity(0.7))
                     .cornerRadius(5)
                     .padding([.bottom, .trailing], 5)
             }
@@ -43,13 +50,13 @@ struct PeopleListCell: View {
                 .lineLimit(1)
                 .padding(.leading, 10)
             
-            Spacer() // To push text to the left
+            Spacer()
         }
-        .padding(.vertical, 5) // Vertical padding to avoid overlap
-        .background(Color.white) // White background to distinguish each cell
-        .cornerRadius(10) // Rounded corners for the cell
-        .shadow(radius: 5) // Optional: Add shadow for visual depth
-        .padding(.horizontal) // Horizontal padding to prevent overlap
+        .padding(.vertical, 5)
+        .background(selectedThemeColor.lighter())
+        .cornerRadius(10)
+        .shadow(radius: 5)
+        .padding(.horizontal)
     }
 }
 

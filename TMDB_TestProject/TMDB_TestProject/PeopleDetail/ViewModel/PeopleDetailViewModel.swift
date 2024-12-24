@@ -8,13 +8,15 @@
 import Foundation
 import Combine
 
+// MARK: -  PeopleDetailViewModel
 class PeopleDetailViewModel: ObservableObject {
     @Published var person: PeopleDetails?
     @Published var images: [ProfileImage] = []
     private var cancellables = Set<AnyCancellable>()
     
     func fetchPersonDetails(personId: Int) {
-        let detailsUrl = URL(string: "\(APIConfig.baseURL)/person/\(personId)?api_key=\(APIConfig.apiKey)")!
+        guard let detailsUrl = URL(string: "\(APIConfig.baseURL)/person/\(personId)?api_key=\(APIConfig.apiKey)") else { return
+        }
         
         NetworkManager.shared.fetch(url: detailsUrl)
             .sink(receiveCompletion: { completion in
@@ -28,7 +30,7 @@ class PeopleDetailViewModel: ObservableObject {
     }
     
     func fetchGallery(personId: Int) {
-        let imagesUrl = URL(string: "\(APIConfig.baseURL)/person/\(personId)/images?api_key=\(APIConfig.apiKey)")!
+        guard let imagesUrl = URL(string: "\(APIConfig.baseURL)/person/\(personId)/images?api_key=\(APIConfig.apiKey)") else { return }
         NetworkManager.shared.fetch(url: imagesUrl)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -41,5 +43,11 @@ class PeopleDetailViewModel: ObservableObject {
                 self?.images = response.profiles
             })
             .store(in: &cancellables)
+    }
+    
+    // MARK: - Helper Methods
+    func shareableImages() -> [Any]? {
+        let imageURLs = self.images.map { "https://image.tmdb.org/t/p/original\($0.file_path)" }
+        return imageURLs
     }
 }
