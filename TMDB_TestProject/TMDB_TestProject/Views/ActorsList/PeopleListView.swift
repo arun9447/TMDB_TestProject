@@ -15,6 +15,7 @@ struct PeopleListView: View {
     var body: some View {
         NavigationView {
             VStack {
+                headerView
                 // Search Bar
                 SearchBar(text: $viewModel.searchQuery)
                     .padding(.top)
@@ -30,11 +31,20 @@ struct PeopleListView: View {
                         viewModel.fetchPeople()
                     }
                 }
-                .navigationTitle("Popular People")
+                .navigationBarHidden(true)
             }
         }
     }
-    
+    private var headerView: some View {
+        // Custom HeaderView
+               CustomHeaderView(
+                   title: "Popular People", // Optional title
+                   customImage: Image(systemName: "gear"), // Optional custom image
+                   onImageTapped: {
+                       print("Custom Image tapped")
+                   }
+               )
+    }
     private var peopleList: some View {
         // Loop through the filtered people array and display each person using PeopleListCell
         ForEach(viewModel.people) { actorObj in

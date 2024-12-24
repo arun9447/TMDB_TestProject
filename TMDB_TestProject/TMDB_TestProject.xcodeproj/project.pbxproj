@@ -29,6 +29,7 @@
 		1F888B1C2D1A559E00C6E325 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1B2D1A559E00C6E325 /* FullScreenImageView.swift */; };
 		1F888B1E2D1A5E8F00C6E325 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1D2D1A5E8F00C6E325 /* ShareSheet.swift */; };
 		1F888B202D1A638D00C6E325 /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B1F2D1A638D00C6E325 /* ExpandableText.swift */; };
+		1F888B232D1A668100C6E325 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F888B222D1A668100C6E325 /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		1F888B1B2D1A559E00C6E325 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		1F888B1D2D1A5E8F00C6E325 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		1F888B1F2D1A638D00C6E325 /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpandableText.swift; path = TMDB_TestProject/Views/Components/ExpandableText.swift; sourceTree = SOURCE_ROOT; };
+		1F888B222D1A668100C6E325 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				1F888B0E2D19B46F00C6E325 /* SearchBar.swift */,
+				1F888B222D1A668100C6E325 /* CustomHeaderView.swift */,
 				1F888B102D19B50100C6E325 /* PeopleListCell.swift */,
 			);
 			path = Components;
@@ -368,6 +371,7 @@
 				1F888B112D19B50100C6E325 /* PeopleListCell.swift in Sources */,
 				1F888B1E2D1A5E8F00C6E325 /* ShareSheet.swift in Sources */,
 				1F888B182D19D5E500C6E325 /* PeopleDetailViewModel.swift in Sources */,
+				1F888B232D1A668100C6E325 /* CustomHeaderView.swift in Sources */,
 				1F888B162D19B8B500C6E325 /* APIConfig.swift in Sources */,
 				1F888AFF2D19B23000C6E325 /* ProfileImage.swift in Sources */,
 				1F888B0F2D19B46F00C6E325 /* SearchBar.swift in Sources */,
